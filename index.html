@@ -404,7 +404,7 @@
 
                     // 밤낮별 색상 변화
                     if(icon.includes('d')){
-                        document.documentElement.style.backgroundColor = '#5AD3FF'
+                        $('.con').css('background-color', '#5AD3FF');
                         $('h1').css('color', '#202020');
                         $('h2').css('color', '#202020');
                         $('h3').css('color', '#202020');
@@ -419,7 +419,7 @@
                         $('.wind_per').css('color', '#202020');
                         
                     } else if(icon.includes('n')){
-                        document.documentElement.style.backgroundColor = '#165166'
+                        $('.con').css('background-color', '#165166');
                         $('h1').css('color', '#EBEBEB');
                         $('h2').css('color', '#EBEBEB');
                         $('h3').css('color', '#EBEBEB');
@@ -579,6 +579,7 @@
 </body>
 
 </html>
+
 
 
 
