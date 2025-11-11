@@ -164,8 +164,8 @@
     }
     .date_rain{
         display: inline-block;
-        width: 20px;
-        text-align: right;
+        width: 50px;
+        text-align: left;
     }
     /* 여기까지 date 영역 */
 
@@ -333,8 +333,6 @@
                     let hu_hu = data.main.humidity
                     let wind = Math.floor(data.wind.speed)
 
-                    // 30일 api에 현재 값을 넣기 위해 추가
-                    window.currentIcon = icon;
 
                     $('#city').text(city)
                     $('.nav_tem').text(to_temp + '°')
@@ -465,12 +463,12 @@
                     dom.append('<p class="day_ti">' + time + '</p>')
                     dom.append('<img class="day_we" src="sun.png" alt="#">')
                     dom.append('<p class="day_tem">' + temp + '°' + '</p>')
-                    dom.append('<img class="hu" src="humidity_low.png" alt="#">' + '<p class="day_wat">' + rain + '%</p>')
+                    dom.append('<img class="hu" src="humidity_mid.png" alt="#">' + '<p class="day_wat">' + rain + '%</p>')
 
                     if ($('body').hasClass('is-night')) {
-                        dom.find('.hu').attr('src', 'humidity_low_n.png');
+                        dom.find('.hu').attr('src', 'humidity_mid_n.png');
                     } else {
-                        dom.find('.hu').attr('src', 'humidity_low.png');
+                        dom.find('.hu').attr('src', 'humidity_mid.png');
                     }
 
 
@@ -491,18 +489,6 @@
                     }
 
                     $('.forecast').append(dom)
-
-                    // if(window.currentIcon){
-                    //     if(window.currentIcon.includes('d')){
-                    //         $('.day').css('background-color', '#BFEEFF')
-                    //         dom.find('p').css('color', '#202020');
-                    //     dom.find('.hu').attr('src', 'humidity_low.png')
-                    //     } else if(window.currentIcon.includes('n')){
-                    //         $('.day').css('background-color', '#5B899A')
-                    //         dom.find('p').css('color', '#ffffff');
-                    //         dom.find('.hu').attr('src', 'humidity_low_n.png')
-                    //     }
-                    // }
 
                 }
             })
@@ -553,12 +539,12 @@
                     dom2.append('<p class="date_d">' + date + '</p>')
                     dom2.append('<p class="date_temmm">' + date_te + '</p>')
                     dom2.append('<img class="date_we" src="#" alt="#">')
-                    dom2.append('<img class="hu" src="humidity_low.png" alt="#">' + '<p class="date_rain">' + rain2 + '%</p>')
+                    dom2.append('<img class="hu" src="humidity_mid.png" alt="#">' + '<p class="date_rain">' + rain2 + '%</p>')
 
                     if ($('body').hasClass('is-night')) {
-                        dom2.find('.hu').attr('src', 'humidity_low_n.png');
+                        dom2.find('.hu').attr('src', 'humidity_mid_n.png');
                     } else {
-                        dom2.find('.hu').attr('src', 'humidity_low.png');
+                        dom2.find('.hu').attr('src', 'humidity_mid.png');
                     }
 
                     if(icon2 == '01d'){
@@ -577,17 +563,6 @@
 
                     $('#date').append(dom2)
                     
-                    // if(window.currentIcon){
-                    //     if(window.currentIcon.includes('d')){
-                    //         $('.ddate').css('background-color', '#BFEEFF')
-                    //         dom2.find('p').css('color', '#202020');
-                    //         dom2.find('.hu').attr('src', 'humidity_low.png')
-                    //     } else if(window.currentIcon.includes('n')){
-                    //         $('.ddate').css('background-color', '#5B899A')
-                    //         dom2.find('p').css('color', '#ffffff');
-                    //         dom2.find('.hu').attr('src', 'humidity_low_n.png')
-                    //     }
-                    // }
 
                 }
 
@@ -597,3 +572,4 @@
 </body>
 
 </html>
+
