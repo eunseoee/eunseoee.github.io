@@ -24,9 +24,13 @@
 
     html{
         width: 393px;
-        background-color: #5AD3FF;
         margin-left: auto;
         margin-right: auto;
+    }
+    .con{
+        width: 393px;
+        background-color: #5AD3FF;
+        overflow: hidden;
     }
     .nav{
         padding-left: 40px;
@@ -279,33 +283,35 @@
 </style>
 
 <body>
-    <div class="nav">
-        <div class="lo">
-            <img class="material-symbols-outlined loc" src="location_on.png" alt="#">
-            <h1 id="city"></h1>
+    <div class="con">
+        <div class="nav">
+            <div class="lo">
+                <img class="material-symbols-outlined loc" src="location_on.png" alt="#">
+                <h1 id="city"></h1>
+            </div>
+            <h2 class="nav_tem"></h2>
+            <div class="te">
+                <img class="material-symbols-outlined tem" src="device_thermostat.png" alt="#">
+                <h3 id="nav_temmm"></h3>
+            </div>
+            <h4 id="weather"></h4>
+            <img class="now_weather"></img>
         </div>
-        <h2 class="nav_tem"></h2>
-        <div class="te">
-            <img class="material-symbols-outlined tem" src="device_thermostat.png" alt="#">
-            <h3 id="nav_temmm"></h3>
+        <!-- 여기까지가 맨 위 현재 정보들 -->
+        <div class="day">
+            <div class="forecast"></div>
         </div>
-        <h4 id="weather"></h4>
-        <img class="now_weather"></img>
+        <!-- 여기까지가 하루 정보 -->
+        <div class="ddate">
+            <div id="date"></div>
+            <div class="weather_box"></div>
+        </div>
+        <!-- 여기까지가 날짜별 정보 -->
+        <div class="popup">
+            <div class="pop_line"></div>
+        </div>
+        <div class="hi_pop"></div>
     </div>
-    <!-- 여기까지가 맨 위 현재 정보들 -->
-    <div class="day">
-        <div class="forecast"></div>
-    </div>
-    <!-- 여기까지가 하루 정보 -->
-    <div class="ddate">
-        <div id="date"></div>
-        <div class="weather_box"></div>
-    </div>
-    <!-- 여기까지가 날짜별 정보 -->
-    <div class="popup">
-        <div class="pop_line"></div>
-    </div>
-    <div class="hi_pop"></div>
 
 
 
@@ -573,5 +579,6 @@
 </body>
 
 </html>
+
 
 
